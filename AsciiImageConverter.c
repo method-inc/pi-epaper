@@ -34,7 +34,6 @@ int atoi(char *p) {
 		k = (k*10)+(*p)-'0';
 		p++;
 	}
-	printf("%d\n", k);
 	return k;
 }
 
@@ -74,10 +73,10 @@ void asciiImage_readImage(char * file, uint8_t * image, int h, int w) {
 	// 	c = fgetc(f);
 	// 	if (c == '\n') break;
 	// 	*l++ = c;
- // 	} while (c != EOF);
+	// 	} while (c != EOF);
 
 	// // reset line
- // 	l = &line[0];
+	// 	l = &line[0];
 	// memset((uint8_t*)&line[0], 0, sizeof(line));
 
 	// read width
@@ -106,12 +105,11 @@ void asciiImage_readImage(char * file, uint8_t * image, int h, int w) {
 
 	// now we are pointing to either newline or first char on image line.
 
-	printf("Opening file %s [%d, %d]\n", file, file_w, file_h);
+	// printf("Opening file %s [%d, %d]\n", file, file_w, file_h);
 
 	// reset line
  	l = &line[0];
 	memset((uint8_t*)&line[0], 0, sizeof(line));
-
 
 	if (h != file_h) printf("Height mismatch.\n");
 	if ((w*8) != file_w) printf("Width mismatch\n");
@@ -123,6 +121,7 @@ void asciiImage_readImage(char * file, uint8_t * image, int h, int w) {
 			pixelGroup = 0;
 			do {
 				c = getc(f);
+				// Ignore newlines and spaces
 				if (c == '\n' || c == ' ') continue;
 				pixelGroup += tod(c, 7-k);
 				k++;

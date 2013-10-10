@@ -47,8 +47,7 @@ int main(int argc, char *argv[])
 	if (argc > 1)
 	{
 		char command[100];
-		if (argc == 3)
-		printf("Image from file %s\n", argv[1]);
+		printf("Displaying image from file: %s\n", argv[1]);
 		sprintf(command, "convert -monochrome -compress none -gravity center -background white -extent 264x176 %s /tmp/tmp.pbm", argv[1]);
 		system(command);
 		asciiImage_readImage("/tmp/tmp.pbm", pImg, 176, 33);
