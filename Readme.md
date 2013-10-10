@@ -6,7 +6,7 @@ If you have ever tried to display something on an e-ink screen from your Raspber
 
 Here's how to do it so I can save you possibly weeks of work. Why? Because I'm a nice guy.
 
-This software will allow you to easily take appropriately sized images on your machine (or from anywhere, really) and display them correctly on the e-ink display. This is no simple task since the demo software that you get with the 
+This software will allow you to easily take appropriately sized images on your machine (or from anywhere, really) and display them correctly on the e-ink display. This is no simple task since the demo software that you get with the e-ink display only has two demo images that are built in code, which doesn't work in real-world scenarios.
 
 ![Skookum Logo](screenshots/skookum.jpg)
 
