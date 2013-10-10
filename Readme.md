@@ -6,13 +6,13 @@ If you have ever tried to display something on an e-ink screen from your Raspber
 
 Here's how to do it so I can save you possibly weeks of work. Why? Because I'm a nice guy.
 
-This software will allow you to easily take appropriately sized images on your machine (or from anywhere, really) and display them properly on the e-ink display.
+This software will allow you to easily take appropriately sized images on your machine (or from anywhere, really) and display them correctly on the e-ink display. This is no simple task since the demo software that you get with the 
 
 ## Hardware
 
 You'll need a bit of hardware to get started.
 
-1. A Raspberry Pi. You can purchase these literally everywhere. Doesn't matter what model.
+1. A Raspberry Pi. You can purchase these [literally everywhere](https://www.google.com/search?q=raspberry+pi&tbm=shop). Doesn't matter what model, but we use the Model B.
 2. An [Embedded Artists e-ink display](http://www.embeddedartists.com/products/displays/lcd_27_epaper.php). Specifically, this code is made to work with the 2.7" model.
 
 ## Software
@@ -27,8 +27,8 @@ You'll need a few things to get started:
 
 1. The Linux build tools
 2. [ImageMagick](http://www.imagemagick.org/)
-3. Git
-4. libi2c developer tools (if you're not running Rasbian)
+3. libi2c developer tools (if you're not running Rasbian)
+4. Git (this may already be installed)
 
 Here's a simple one-liner for you to run:
 
@@ -46,17 +46,17 @@ cd wiringPi
 ./build
 ```
 
-You can delete the `wiringPi` directory once its installed correctly.
+You can delete the `wiringPi` directory once it has installed.
 
 ## Putting The Hardware Together
 
-You'll want to [follow the wiring diagram](http://www.embeddedartists.com/sites/default/files/support/displays/epaper/Epaper_RaspberryPi.pdf) from Embedded Artists on how to wire the e-ink display up to the GPIO pins on your Raspberry PI.
+You'll want to [follow the wiring diagram](http://www.embeddedartists.com/sites/default/files/support/displays/epaper/Epaper_RaspberryPi.pdf) from Embedded Artists on how to wire the e-ink display up to the [GPIO pins](http://en.wikipedia.org/wiki/General-purpose_input/output) on your Raspberry PI.
 
 ## Compiling the Software
 
 1. Clone the repository to your Raspberry Pi and cd into the directory.
 2. Run `make`.
-3. This will create the compiled binary  `./epaper`.
+3. This will create the compiled binary named `epaper`.
 4. There is no step 4.
 
 ## Running the Software
@@ -91,6 +91,10 @@ This image is smaller than `264x176` so the application should pad the image to 
 ```bash
 sudo ./epaper ./test_images/skookum.png
 ```
+
+# Contributing
+
+See the [Contributing.md](Contributing.md) fiole for more information.
 
 # License
 
