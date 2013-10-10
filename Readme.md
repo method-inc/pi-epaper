@@ -8,6 +8,8 @@ Here's how to do it so I can save you possibly weeks of work. Why? Because I'm a
 
 This software will allow you to easily take appropriately sized images on your machine (or from anywhere, really) and display them correctly on the e-ink display. This is no simple task since the demo software that you get with the 
 
+![Skookum Logo](screenshots/skookum.jpg)
+
 ## Hardware
 
 You'll need a bit of hardware to get started.
@@ -86,11 +88,16 @@ This image is a full `264x176` png image.
 sudo ./epaper ./test_images/velociraptor.png
 ```
 
+![Velociraptor](screenshots/velociraptor.jpg)
+
 This image is smaller than `264x176` so the application should pad the image to the middle of the display.
 
 ```bash
 sudo ./epaper ./test_images/skookum.png
 ```
+
+![Skookum Logo](screenshots/skookum.jpg)
+
 
 # Contributing
 
