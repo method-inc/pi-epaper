@@ -23,13 +23,30 @@ I'm using the latest version of [Rasbian](http://www.raspbian.org/), installed u
 
 ### Software Dependencies
 
-You'll need the Linux build tools and [ImageMagick](http://www.imagemagick.org/) installed on your Raspberry Pi. You can do that with a simple one-liner:
+You'll need a few things to get started:
+
+1. The Linux build tools
+2. [ImageMagick](http://www.imagemagick.org/)
+3. Git
+4. libi2c developer tools (if you're not running Rasbian)
+
+Here's a simple one-liner for you to run:
 
 ```bash
-sudo apt-get update && sudo apt-get install -y gcc make build-essential imagemagick
+sudo apt-get update && sudo apt-get install -y gcc make build-essential imagemagick git-core libi2c-dev
 ```
 
 This will likely take a while. Go grab a cup of :coffee: or a :beer:.
+
+Next, install [wiringPi](http://wiringpi.com/download-and-install/). Here's a quick cheet sheet:
+
+```bash
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+./build
+```
+
+You can delete the `wiringPi` directory once its installed correctly.
 
 ## Putting The Hardware Together
 
@@ -44,6 +61,12 @@ You'll want to [follow the wiring diagram](http://www.embeddedartists.com/sites/
 
 ## Running the Software
 
+In order for the software to talk to the GPIO pins, you have to turn them on. This only needs to be run once per boot:
+
+```bash
+gpio load spi && gpio load i2c
+```
+
 Simply pass an image file that is `264x176` or smaller (the application will automatically pad the image to that size) to the binary like so:
 
 ```bash
@@ -55,8 +78,19 @@ A few things to note here:
 1. It doesn't matter what format your image is in. JPG, GIF, TIFF, whatever. ImageMagick will take care of that automatically for us.
 2. Don't forget to `sudo` when you run the binary. The application requires `sudo` access in order to use the GPIO pins.
 
-## How it Works
+## Testing
 
+This image is a full `264x176` png image.
+
+```bash
+sudo ./epaper ./test_images/velociraptor.png
+```
+
+This image is smaller than `264x176` so the application should pad the image to the middle of the display.
+
+```bash
+sudo ./epaper ./test_images/skookum.png
+```
 
 # License
 
