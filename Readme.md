@@ -1,4 +1,4 @@
-# rpi-epaper
+# pi-epaper
 
 ## Overview
 
