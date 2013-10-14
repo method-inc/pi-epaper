@@ -1,12 +1,12 @@
-# rpi-eink
+# rpi-epaper
 
 ## Overview
 
-If you have ever tried to display something on an e-ink screen from your Raspberry Pi, you understand what a painful process it can be. If you succeeded, you're probably a rockstar programmer. I am not a rockstar programmer, but I got it to work with a mishmash of bits and pieces of code and a lot of research about how the e-ink display works.
+If you have ever tried to display something on an e-paper screen from your Raspberry Pi, you understand what a painful process it can be. If you succeeded, you're probably a rockstar programmer. I am not a rockstar programmer, but I got it to work with a mishmash of bits and pieces of code and a lot of research about how the e-paper display works.
 
 Here's how to do it so I can save you possibly weeks of work. Why? Because I'm a nice guy.
 
-This software will allow you to easily take appropriately sized images on your machine (or from anywhere, really) and display them correctly on the e-ink display. This is no simple task since the demo software that you get with the e-ink display only has two demo images that are built in code, which doesn't work in real-world scenarios.
+This software will allow you to easily take appropriately sized images on your machine (or from anywhere, really) and display them correctly on the e-paper display. This is no simple task since the demo software that you get with the e-paper display only has two demo images that are built in code, which doesn't work in real-world scenarios.
 
 ![Skookum Logo](screenshots/skookum.jpg)
 
@@ -15,7 +15,7 @@ This software will allow you to easily take appropriately sized images on your m
 You'll need a bit of hardware to get started.
 
 1. A Raspberry Pi. You can purchase these [literally everywhere](https://www.google.com/search?q=raspberry+pi&tbm=shop). Doesn't matter what model, but we use the Model B.
-2. An [Embedded Artists e-ink display](http://www.embeddedartists.com/products/displays/lcd_27_epaper.php). Specifically, this code is made to work with the 2.7" model.
+2. An [Embedded Artists e-paper display](http://www.embeddedartists.com/products/displays/lcd_27_epaper.php). Specifically, this code is made to work with the 2.7" model.
 
 ## Software
 
@@ -52,7 +52,7 @@ You can delete the `wiringPi` directory once it has installed.
 
 ## Putting The Hardware Together
 
-You'll want to [follow the wiring diagram](http://www.embeddedartists.com/sites/default/files/support/displays/epaper/Epaper_RaspberryPi.pdf) from Embedded Artists on how to wire the e-ink display up to the [GPIO pins](http://en.wikipedia.org/wiki/General-purpose_input/output) on your Raspberry PI.
+You'll want to [follow the wiring diagram](http://www.embeddedartists.com/sites/default/files/support/displays/epaper/Epaper_RaspberryPi.pdf) from Embedded Artists on how to wire the e-paper display up to the [GPIO pins](http://en.wikipedia.org/wiki/General-purpose_input/output) on your Raspberry PI.
 
 ## Compiling the Software
 
@@ -139,3 +139,6 @@ All rights reserved.
 ```
 Copyright 2013 Pervasive Displays, Inc.
 ```
+
+---
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Skookum/pi-epaper/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
