@@ -139,6 +139,3 @@ All rights reserved.
 ```
 Copyright 2013 Pervasive Displays, Inc.
 ```
-
----
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Skookum/pi-epaper/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
