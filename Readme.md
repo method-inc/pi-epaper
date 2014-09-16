@@ -101,7 +101,7 @@ sudo ./epaper ./test_images/skookum.png
 
 # Contributing
 
-See the [Contributing.md](Contributing.md) fiole for more information.
+See the [Contributing.md](Contributing.md) file for more information.
 
 # License
 
